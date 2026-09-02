@@ -218,21 +218,24 @@ p + p { margin-top: 1em; }
 .hero {
   margin-top: var(--nav-h);
   position: relative;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 4px;
   height: 520px;
   background: var(--teal-mid);
 }
 
+.hero__gallery {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 520px;
+  gap: 4px;
+  height: 520px;
+}
+
 .hero__main {
-  position: relative;
   overflow: hidden;
+  height: 520px;
 }
 
 .hero__main img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -246,6 +249,8 @@ p + p { margin-top: 1em; }
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 4px;
+  height: 520px;
+  overflow: hidden;
 }
 
 .hero__grid img {
@@ -1002,19 +1007,19 @@ p + p { margin-top: 1em; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
-  .hero {
+  .hero { height: auto; }
+  .hero__gallery {
     grid-template-columns: 1fr;
-    grid-template-rows: 280px 160px;
+    grid-template-rows: 260px 140px;
     height: auto;
   }
-  .hero__main { height: 280px; }
+  .hero__main { height: 260px; }
   .hero__grid {
-    height: 160px;
+    height: 140px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    overflow: hidden;
+    grid-template-rows: 140px;
   }
-  .hero__grid img { height: 160px; }
+  .hero__grid img { height: 140px; }
 
   .intro {
     grid-template-columns: 1fr;
