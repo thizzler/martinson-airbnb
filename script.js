@@ -1,27 +1,25 @@
-// Offset anchor scrolling to account for sticky nav
-document.querySelectorAll('.concept-nav a').forEach(link => {
-  link.addEventListener('click', e => {
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  // Close the menu after tapping a link
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+}
+
+// Newsletter form — show success state, no backend
+const newsletterForm = document.getElementById('newsletterForm');
+const newsletterSuccess = document.getElementById('newsletterSuccess');
+
+if (newsletterForm && newsletterSuccess) {
+  newsletterForm.addEventListener('submit', e => {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      const offset = target.getBoundingClientRect().top + window.scrollY - 48;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
-    }
+    newsletterSuccess.classList.add('show');
+    newsletterForm.reset();
   });
-});
-
-// Highlight active concept in nav as user scrolls
-const sections = document.querySelectorAll('.concept[id]');
-const navLinks = document.querySelectorAll('.concept-nav a');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === `#${entry.target.id}` ? '#fff' : '#888';
-      });
-    }
-  });
-}, { threshold: 0.3 });
-
-sections.forEach(s => observer.observe(s));
+}
