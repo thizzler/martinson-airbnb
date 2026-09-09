@@ -42,12 +42,15 @@
   <section class="hero">
     <div class="hero__gallery">
       <div class="hero__main">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/c3ce4b48-3d8b-4bc3-a48f-cb73385d0a3e.jpeg?im_w=1200" alt="The Sunny Nest exterior" loading="eager">
+        <img src="images/exterior-front.jpg" alt="The Sunny Nest exterior" loading="eager">
         <div class="hero__overlay">
-          <div class="hero__overlay-badge">Airbnb Guest Favorite - 5.0 · 18 reviews</div>
-          <h1 class="hero__overlay-headline">Space to<br><em>breathe.</em></h1>
-          <p class="hero__overlay-sub">A boho-modern home in Nampa, Idaho - thoughtfully designed, fully private, and a short walk from downtown.</p>
-          <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--hero">Book on Airbnb</a>
+          <div class="hero__overlay-badge" data-content="heroBadge">Airbnb Guest Favorite - 5.0 · 18 reviews</div>
+          <h1 class="hero__overlay-headline" data-content="heroHeadline">Space to<br><em>breathe.</em></h1>
+          <p class="hero__overlay-sub" data-content="heroSub">A boho-modern home in Nampa, Idaho - thoughtfully designed, fully private, and a short walk from downtown.</p>
+          <div class="hero__actions">
+            <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--hero">Book on Airbnb</a>
+            <a data-book="vrbo" href="https://www.vrbo.com/5193651" target="_blank" rel="noopener" class="btn btn--hero btn--hero-alt">Book on Vrbo</a>
+          </div>
         </div>
       </div>
     </div>
@@ -77,11 +80,14 @@
           <span class="meta-label">Rating</span>
         </div>
       </div>
-      <p class="intro__sub">The kind of place that feels like yours from the moment you arrive. Quiet, private, and designed with real care.</p>
-      <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--outline-light">Book on Airbnb</a>
+      <p class="intro__sub" data-content="introSub">The kind of place that feels like yours from the moment you arrive. Quiet, private, and designed with real care.</p>
+      <div class="booking-buttons">
+        <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--outline-light">Book on Airbnb</a>
+        <a data-book="vrbo" href="https://www.vrbo.com/5193651" target="_blank" rel="noopener" class="btn btn--outline-light">Book on Vrbo</a>
+      </div>
     </div>
     <div class="intro__image">
-      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/e49bfb83-b993-49a8-91e2-f9f452e2ef3f.jpeg?im_w=720" alt="Primary bedroom">
+      <img src="images/primary-bedroom.jpg" alt="Primary bedroom">
     </div>
   </section>
 
@@ -122,34 +128,14 @@
 
   <!-- ABOUT THE HOME -->
   <section class="about" id="about">
-    <div class="about__text">
+    <div class="about__intro">
       <h2 class="section-title">The Home</h2>
-      <p>Welcome to The Sunny Nest - a serene home away from home nestled next to Northwest Nazarene University. Thoughtfully designed with calming colors, boho textures, and cozy touches, this retreat is perfect for visiting parents, professionals, or anyone who needs a quiet place to land.</p>
-      <p>The property is mainly a one-level single family home, with the primary bedroom and bath on the second level. The yard is fully enclosed with fencing and gated access - genuinely private in the best way. String lights, a fire pit, and outdoor seating make the patio a place you'll actually use.</p>
-      <p>Downtown Nampa is a short walk. Boise is 20 miles. Bogus Basin ski resort is about an hour away.</p>
-
-      <div class="sleep-grid">
-        <div class="sleep-card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/e49bfb83-b993-49a8-91e2-f9f452e2ef3f.jpeg?im_w=720" alt="Bedroom 1">
-          <div class="sleep-card__info">
-            <div class="sleep-card__name">Bedroom 1</div>
-            <div class="sleep-card__desc">King bed · cozy linens, Pendleton blanket, extra pillows</div>
-          </div>
-        </div>
-        <div class="sleep-card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/3b355dc7-42bf-492a-9d75-2f02edfa627f.jpeg?im_w=720" alt="Bedroom 2">
-          <div class="sleep-card__info">
-            <div class="sleep-card__name">Bedroom 2</div>
-            <div class="sleep-card__desc">Queen sleeper-sofa · comfortable and well-appointed</div>
-          </div>
-        </div>
-      </div>
+      <p data-content="aboutP1">Welcome to The Sunny Nest - a serene home away from home nestled next to Northwest Nazarene University. Thoughtfully designed with calming colors, boho textures, and cozy touches, this retreat is perfect for visiting parents, professionals, or anyone who needs a quiet place to land.</p>
+      <p data-content="aboutP2">The property is mainly a one-level single family home, with the primary bedroom and bath on the second level. The yard is fully enclosed with fencing and gated access - genuinely private in the best way. String lights, a fire pit, and outdoor seating make the patio a place you'll actually use.</p>
+      <p data-content="aboutP3">Downtown Nampa is a short walk. Boise is 20 miles. Bogus Basin ski resort is about an hour away.</p>
     </div>
 
-    <div class="about__photos">
-      <img class="about__photo about__photo--top" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/bc6f787c-c375-4627-8075-c3d7246e7198.jpeg?im_w=720" alt="Living space">
-      <img class="about__photo about__photo--bottom" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/3c86723e-c4ba-4763-8493-698b74b875b9.jpeg?im_w=720" alt="Outdoor patio">
-    </div>
+    <div class="gallery" data-gallery aria-label="Photo gallery of The Sunny Nest"></div>
   </section>
 
   <!-- AMENITIES -->
@@ -205,12 +191,15 @@
         <span>58 total amenities</span>
       </div>
     </div>
-    <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--outline">See all 58 amenities on Airbnb</a>
+    <div class="booking-buttons booking-buttons--center">
+      <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--outline">See all amenities on Airbnb</a>
+      <a data-book="vrbo" href="https://www.vrbo.com/5193651" target="_blank" rel="noopener" class="btn btn--outline">See all amenities on Vrbo</a>
+    </div>
   </section>
 
   <!-- OUTDOOR PHOTO BREAK -->
   <div class="photo-break">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526104999250906729/original/9cedeea5-c0c6-4878-b2a9-d4ce4e9bb780.jpeg?im_w=1200" alt="The Sunny Nest interior">
+    <img src="images/interior.jpg" alt="Covered modern entry at The Sunny Nest">
     <div class="photo-break__caption">Boho textures, natural light, calming colors - every detail considered.</div>
   </div>
 
@@ -278,7 +267,10 @@
         </div>
       </div>
 
-      <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--outline">Read all 18 reviews on Airbnb</a>
+      <div class="booking-buttons">
+        <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--outline">Read all reviews on Airbnb</a>
+        <a data-book="vrbo" href="https://www.vrbo.com/5193651" target="_blank" rel="noopener" class="btn btn--outline">Read all reviews on Vrbo</a>
+      </div>
     </div>
   </section>
 
@@ -335,8 +327,8 @@
   <section class="book" id="book">
     <div class="book__inner">
       <div class="book__text">
-        <h2 class="book__title">Ready to <em>stay?</em></h2>
-        <p class="book__sub">Check availability and book directly through Airbnb. Hosted by Garen - Superhost, 5.0 rating, responds within the hour.</p>
+        <h2 class="book__title" data-content="bookTitle">Ready to <em>stay?</em></h2>
+        <p class="book__sub" data-content="bookSub">Check availability and book directly through Airbnb or Vrbo. Hosted by Garen - Superhost, 5.0 rating, responds within the hour.</p>
         <div class="book__rules">
           <div class="book__rule">Check-in after 3:00 PM</div>
           <div class="book__rule">Checkout before 11:00 AM</div>
@@ -344,11 +336,15 @@
         </div>
       </div>
       <div class="book__cta-wrap">
-        <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--primary btn--large">
+        <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener" class="btn btn--primary btn--large">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Book on Airbnb
         </a>
-        <p class="book__airbnb-note">You'll be taken to Airbnb to complete your reservation securely.</p>
+        <a data-book="vrbo" href="https://www.vrbo.com/5193651" target="_blank" rel="noopener" class="btn btn--outline-light btn--large book__cta-vrbo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Book on Vrbo
+        </a>
+        <p class="book__airbnb-note">You'll be taken to Airbnb or Vrbo to complete your reservation securely.</p>
       </div>
     </div>
   </section>
@@ -406,11 +402,12 @@
         <a href="#amenities">Amenities</a>
         <a href="#reviews">Reviews</a>
         <a href="#location">Location</a>
-        <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener">Book on Airbnb</a>
+        <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener">Book on Airbnb</a>
+        <a data-book="vrbo" href="https://www.vrbo.com/5193651" target="_blank" rel="noopener">Book on Vrbo</a>
       </nav>
       <div class="footer__host">
         <p>Hosted by <strong>Garen</strong> · Superhost</p>
-        <a href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener">Message host on Airbnb</a>
+        <a data-book="airbnb" href="https://www.airbnb.com/rooms/1526104999250906729" target="_blank" rel="noopener">Message host on Airbnb</a>
       </div>
     </div>
     <div class="footer__bottom">
@@ -418,6 +415,18 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX (photo gallery viewer) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous photo">&#8249;</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="">
+      <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
