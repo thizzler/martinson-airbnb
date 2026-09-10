@@ -4,6 +4,12 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Remove the iOS Safari double-tap-to-zoom delay/gesture on interactive
+   controls (keeps pinch-zoom available elsewhere for accessibility). */
+a,
+button,
+.gallery__item { touch-action: manipulation; }
+
 :root {
   --bg:        #FAF6EF;
   --bg-white:  #FFFFFF;
