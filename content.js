@@ -28,7 +28,7 @@ window.SITE = {
        caption = text shown on hover + in the enlarged view
   ------------------------------------------------------------- */
   gallery: [
-    { src: "images/room-1.jpg",          alt: "King bedroom",        caption: "King bed with cozy Southwestern throw" },
+    { src: "images/room-1.jpg",           alt: "King bedroom",        caption: "King bed with cozy Southwestern throw" },
     { src: "images/living-area-2.jpg",    alt: "Living and kitchen",  caption: "Open-plan living & kitchen bar" },
     { src: "images/private-kitchen-1.jpg",alt: "Kitchen",             caption: "Fully equipped modern kitchen" },
     { src: "images/terrace-patio-1.jpg",  alt: "Evening patio",       caption: "Patio glow \u00b7 string lights & fire pit" },
@@ -39,7 +39,34 @@ window.SITE = {
     { src: "images/interior-1.jpg",       alt: "Staircase",           caption: "Modern staircase to the primary suite" },
     { src: "images/living-area-5.jpg",    alt: "Living room",         caption: "Living room with smart TV" },
     { src: "images/exterior-3.jpg",       alt: "Exterior",            caption: "Fully fenced & private, steps from NNU" },
-    { src: "images/exterior-detail-1.jpg",alt: "Front entry",         caption: "Modern wood-accented entry" }
+    { src: "images/exterior-detail-1.jpg",alt: "Front entry",         caption: "Modern wood-accented entry" },
+    { src: "images/room-2.jpg",           alt: "Primary bedroom",     caption: "Primary suite \u00b7 calm & uncluttered" },
+    { src: "images/living-area-1.jpg",    alt: "Living area",         caption: "Bright, boho-styled living space" },
+    { src: "images/terrace-patio-2.jpg",  alt: "Patio seating",       caption: "Outdoor seating under the string lights" },
+    { src: "images/bathroom-1.jpg",       alt: "Bathroom",            caption: "Clean, modern full bath" },
+    { src: "images/living-area-3.jpg",    alt: "Living area",         caption: "Comfortable seating & natural light" },
+    { src: "images/room-4.jpg",           alt: "Bedroom detail",      caption: "Restful bedroom corner" },
+    { src: "images/exterior-1.jpg",       alt: "Home exterior",       caption: "The Sunny Nest from the street" },
+    { src: "images/interior-2.jpg",       alt: "Interior detail",     caption: "Warm textures & thoughtful details" },
+    { src: "images/terrace-patio-4.jpg",  alt: "Backyard patio",      caption: "Private, fully fenced backyard" },
+    { src: "images/living-area-4.jpg",    alt: "Living area",         caption: "Room to gather & unwind" },
+    { src: "images/bathroom-3.jpg",       alt: "Bathroom",            caption: "Fresh fixtures & finishes" },
+    { src: "images/exterior-2.jpg",       alt: "Home exterior",       caption: "Single-level home with second-floor suite" },
+    { src: "images/living-area-6.jpg",    alt: "Living area",         caption: "Cozy nook to read & relax" },
+    { src: "images/terrace-patio-5.jpg",  alt: "Fire pit",            caption: "Evenings by the fire pit" },
+    { src: "images/interior-3.jpg",       alt: "Interior detail",     caption: "Boho accents throughout" },
+    { src: "images/exterior-detail-2.jpg",alt: "Exterior detail",     caption: "Wood-accented architectural details" },
+    { src: "images/bathroom-4.jpg",       alt: "Bathroom",            caption: "Second bath \u00b7 bright & tidy" },
+    { src: "images/living-area-7.jpg",    alt: "Living area",         caption: "Open, airy common space" },
+    { src: "images/terrace-patio-6.jpg",  alt: "Outdoor space",       caption: "Space to breathe, outdoors" },
+    { src: "images/exterior-4.jpg",       alt: "Home exterior",       caption: "Gated access for real privacy" },
+    { src: "images/property-grounds-1.jpg",alt: "Property grounds",   caption: "Green, low-key grounds" },
+    { src: "images/exterior-detail-3.jpg",alt: "Exterior detail",     caption: "Curb-side charm & landscaping" },
+    { src: "images/exterior-5.jpg",       alt: "Home exterior",       caption: "Quiet residential setting near NNU" },
+    { src: "images/miscellaneous-1.jpg",  alt: "Home detail",         caption: "Little touches that make it feel like home" },
+    { src: "images/exterior-6.jpg",       alt: "Home exterior",       caption: "A short walk from downtown Nampa" },
+    { src: "images/miscellaneous-2.jpg",  alt: "Home detail",         caption: "Thoughtfully stocked for your stay" },
+    { src: "images/miscellaneous-3.jpg",  alt: "Home detail",         caption: "Everything you need, ready to go" }
   ],
 
   /* ---- Editable copy -----------------------------------------
