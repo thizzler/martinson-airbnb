@@ -610,13 +610,14 @@ p + p { margin-top: 1em; }
 }
 .lightbox__close:hover,
 .lightbox__nav:hover { background: rgba(255,255,255,0.28); }
+.lightbox__close svg { width: 20px; height: 20px; display: block; }
+.lightbox__nav svg { width: 24px; height: 24px; display: block; }
 .lightbox__close {
   top: 22px;
   right: 24px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  font-size: 26px;
   line-height: 1;
 }
 .lightbox__nav {
@@ -625,7 +626,6 @@ p + p { margin-top: 1em; }
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  font-size: 30px;
   line-height: 1;
 }
 .lightbox__nav--prev { left: 24px; }
