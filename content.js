@@ -28,13 +28,18 @@ window.SITE = {
        caption = text shown on hover + in the enlarged view
   ------------------------------------------------------------- */
   gallery: [
-    { src: "images/exterior-front.jpg",  alt: "Front exterior with private gate", caption: "Fully fenced & private, steps from NNU" },
-    { src: "images/primary-bedroom.jpg", alt: "Primary bedroom with king bed",    caption: "King bed \u00b7 cozy linens & Pendleton blanket" },
-    { src: "images/patio.jpg",           alt: "Patio seating by the entrance",    caption: "Patio seating just outside the front door" },
-    { src: "images/living-room.jpg",     alt: "The Sunny Nest street view",       caption: "Clean, modern exterior on a quiet street" },
-    { src: "images/bedroom-2.jpg",       alt: "Second bedroom with queen bed",    caption: "Second bedroom \u00b7 warm textures & natural light" },
-    { src: "images/interior.jpg",        alt: "Covered modern entry",             caption: "Covered entry with wood accents" },
-    { src: "images/bedroom.jpg",         alt: "Front doorway",                    caption: "Wood-accented front entrance" }
+    { src: "images/room-1.jpg",          alt: "King bedroom",        caption: "King bed with cozy Southwestern throw" },
+    { src: "images/living-area-2.jpg",    alt: "Living and kitchen",  caption: "Open-plan living & kitchen bar" },
+    { src: "images/private-kitchen-1.jpg",alt: "Kitchen",             caption: "Fully equipped modern kitchen" },
+    { src: "images/terrace-patio-1.jpg",  alt: "Evening patio",       caption: "Patio glow \u00b7 string lights & fire pit" },
+    { src: "images/bathroom-2.jpg",       alt: "Bathroom",            caption: "Spa-style bath with soaking tub" },
+    { src: "images/dining-1.jpg",         alt: "Dining nook",         caption: "Sunny dining nook & breakfast bar" },
+    { src: "images/room-3.jpg",           alt: "Second bedroom",      caption: "Second bedroom \u00b7 restful & bright" },
+    { src: "images/terrace-patio-3.jpg",  alt: "Fire pit lounge",     caption: "Fire pit & lounge seating" },
+    { src: "images/interior-1.jpg",       alt: "Staircase",           caption: "Modern staircase to the primary suite" },
+    { src: "images/living-area-5.jpg",    alt: "Living room",         caption: "Living room with smart TV" },
+    { src: "images/exterior-3.jpg",       alt: "Exterior",            caption: "Fully fenced & private, steps from NNU" },
+    { src: "images/exterior-detail-1.jpg",alt: "Front entry",         caption: "Modern wood-accented entry" }
   ],
 
   /* ---- Editable copy -----------------------------------------
@@ -52,6 +57,52 @@ window.SITE = {
     aboutP3:      "Downtown Nampa is a short walk. Boise is 20 miles. Bogus Basin ski resort is about an hour away.",
     bookTitle:    "Ready to <em>stay?</em>",
     bookSub:      "Check availability and book directly through Airbnb or Vrbo. Hosted by Garen - Superhost, 5.0 rating, responds within the hour."
+  },
+
+  /* ---- Guest reviews -----------------------------------------
+     The overall 5.0 score + gold stars are fixed in the design.
+     Everything below is editable:
+       count -> the "X reviews" line under the score
+       items -> each guest review card
+         name     = guest's first name
+         stars    = star rating 1-5 (shows filled/empty stars)
+         stayDate = when they stayed, "YYYY-MM-DD".
+                    The "1 week ago" text is generated from this.
+         location = their hometown (optional; leave "" to hide)
+         text     = the review itself
+  ------------------------------------------------------------- */
+  reviews: {
+    count: "18 reviews \u00b7 Guest Favorite",
+    items: [
+      {
+        name: "Jeannie",
+        stars: 5,
+        stayDate: "2026-09-02",
+        location: "",
+        text: "We came to help our daughter move into NNU and this place was just perfect - it's within walking distance of campus. Communication was terrific and the Sunny Nest was beautiful. It's good to know we have a \"home\" in Nampa when we come back to visit!"
+      },
+      {
+        name: "Rebecca",
+        stars: 5,
+        stayDate: "2026-08-19",
+        location: "Idaho Falls, ID",
+        text: "Garen's place was beautiful! We loved that the whole property was fenced in - it felt very private. Extremely clean, beautifully decorated, and had many extras available. Comfortable bed, easy temperature control, and the ceiling fan made our night sleep perfect. Would definitely stay here again!"
+      },
+      {
+        name: "Kathleen",
+        stars: 5,
+        stayDate: "2026-07-15",
+        location: "Cottage Grove, OR",
+        text: "The home decor is refreshing and modern with important physical as well as visual space. It's just enjoyable to be there! Garen was delightfully welcoming from the beginning of our planning, glad to help at any time!"
+      },
+      {
+        name: "Erin",
+        stars: 5,
+        stayDate: "2026-06-20",
+        location: "Hayden Lake, ID",
+        text: "Nice place with cute decor. The fencing around the house makes the outdoor space hidden and peaceful. Has all the things you need - spices, bathroom items, and a well stocked kitchen. I would definitely recommend to others."
+      }
+    ]
   }
 
 };

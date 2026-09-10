@@ -3,11 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunny Nest</title>
+
+  <!-- ============================================================
+       SEO / SOCIAL META
+       Update the domain below (SITE_URL) once the site is live on
+       your brother-in-law's domain, e.g. https://thesunnynest.com
+       ============================================================ -->
+  <title>The Sunny Nest · Boho-Modern Airbnb in Nampa, Idaho</title>
+  <meta name="description" content="The Sunny Nest is a boho-modern, fully private 2-bed home in Nampa, Idaho — steps from Northwest Nazarene University and a short walk from downtown. Superhost · 5.0 rating. Book on Airbnb or Vrbo.">
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+  <meta name="theme-color" content="#3E8E63">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Facebook, iMessage, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Sunny Nest">
+  <meta property="og:title" content="The Sunny Nest · Boho-Modern Airbnb in Nampa, Idaho">
+  <meta property="og:description" content="A boho-modern, fully private 2-bed home steps from NNU. Superhost · 5.0 rating. Book on Airbnb or Vrbo.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Sunny Nest — modern home exterior in Nampa, Idaho">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Sunny Nest · Boho-Modern Airbnb in Nampa, Idaho">
+  <meta name="twitter:description" content="A boho-modern, fully private 2-bed home steps from NNU. Superhost · 5.0 rating. Book on Airbnb or Vrbo.">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.com/assets/og-image.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Fraunces:ital,opsz,wght@1,9..144,300..500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,300..500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data: helps Google understand the listing (rating, location) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "The Sunny Nest",
+    "description": "A boho-modern, fully private 2-bedroom home in Nampa, Idaho, steps from Northwest Nazarene University and a short walk from downtown.",
+    "url": "https://YOUR-DOMAIN.com/",
+    "image": "https://YOUR-DOMAIN.com/assets/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nampa",
+      "addressRegion": "ID",
+      "addressCountry": "US"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "18",
+      "bestRating": "5"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -42,7 +99,10 @@
   <section class="hero">
     <div class="hero__gallery">
       <div class="hero__main">
-        <img src="images/exterior-front.jpg" alt="The Sunny Nest exterior" loading="eager">
+        <picture>
+          <source srcset="images/exterior-1.webp" type="image/webp">
+          <img src="images/exterior-1.jpg" alt="The Sunny Nest exterior" loading="eager">
+        </picture>
         <div class="hero__overlay">
           <div class="hero__overlay-badge" data-content="heroBadge">Airbnb Guest Favorite - 5.0 · 18 reviews</div>
           <h1 class="hero__overlay-headline" data-content="heroHeadline">Space to<br><em>breathe.</em></h1>
@@ -87,7 +147,10 @@
       </div>
     </div>
     <div class="intro__image">
-      <img src="images/primary-bedroom.jpg" alt="Primary bedroom">
+      <picture>
+        <source srcset="images/living-area-1.webp" type="image/webp">
+        <img src="images/living-area-1.jpg" alt="Open living area at The Sunny Nest">
+      </picture>
     </div>
   </section>
 
@@ -199,7 +262,10 @@
 
   <!-- OUTDOOR PHOTO BREAK -->
   <div class="photo-break">
-    <img src="images/interior.jpg" alt="Covered modern entry at The Sunny Nest">
+    <picture>
+      <source srcset="images/terrace-patio-1.webp" type="image/webp">
+      <img src="images/terrace-patio-1.jpg" alt="Evening patio with string lights and fire pit">
+    </picture>
     <div class="photo-break__caption">Boho textures, natural light, calming colors - every detail considered.</div>
   </div>
 
@@ -212,12 +278,12 @@
           <span class="score-num">5.0</span>
           <div>
             <div class="score-stars">★★★★★</div>
-            <div class="score-sub">18 reviews · Guest Favorite</div>
+            <div class="score-sub" data-content="reviewsCount">18 reviews · Guest Favorite</div>
           </div>
         </div>
       </div>
 
-      <div class="reviews__grid">
+      <div class="reviews__grid" data-reviews>
         <div class="review-card">
           <div class="review-card__header">
             <div class="review-card__avatar">J</div>
@@ -428,5 +494,21 @@
 
   <script src="content.js"></script>
   <script src="script.js"></script>
+
+  <!-- ============================================================
+       ANALYTICS (free & privacy-friendly) — currently OFF.
+       Pick ONE, uncomment it, and paste in your ID/token.
+
+       Option A · Cloudflare Web Analytics (best if you host on
+       Cloudflare Pages). Free, no cookie banner needed.
+       Get your token at dash.cloudflare.com → Web Analytics.
+       <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+               data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
+
+       Option B · GoatCounter. Free for personal sites, super simple.
+       Sign up at goatcounter.com to get your code (yourname).
+       <script data-goatcounter="https://YOURNAME.goatcounter.com/count"
+               async src="//gc.zgo.at/count.js"></script>
+       ============================================================ -->
 </body>
 </html>

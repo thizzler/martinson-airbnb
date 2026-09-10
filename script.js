@@ -30,8 +30,12 @@ if (galleryEl && photos.length) {
     item.type = 'button';
     item.setAttribute('aria-label', 'View photo: ' + (photo.caption || photo.alt || ''));
     item.dataset.index = i;
+    const webp = photo.src.replace(/\.jpg$/i, '.webp');
     item.innerHTML =
-      '<img src="' + photo.src + '" alt="' + (photo.alt || '') + '" loading="lazy">' +
+      '<picture>' +
+        '<source srcset="' + webp + '" type="image/webp">' +
+        '<img src="' + photo.src + '" alt="' + (photo.alt || '') + '" loading="lazy">' +
+      '</picture>' +
       (photo.caption ? '<span class="gallery__caption">' + photo.caption + '</span>' : '');
     galleryEl.appendChild(item);
   });
@@ -76,6 +80,67 @@ if (galleryEl && photos.length) {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') showPhoto(current - 1);
     if (e.key === 'ArrowRight') showPhoto(current + 1);
+  });
+}
+
+// Render guest reviews from the config file (content.js).
+// The "X ago" text is generated from each review's stayDate.
+const reviewsEl = document.querySelector('[data-reviews]');
+const reviews = (window.SITE && window.SITE.reviews && Array.isArray(window.SITE.reviews.items))
+  ? window.SITE.reviews.items : [];
+
+// Turn a "YYYY-MM-DD" stay date into "1 week ago" / "3 months ago" etc.
+function relativeTime(dateStr) {
+  const then = new Date(dateStr);
+  if (isNaN(then)) return '';
+  const days = Math.floor((Date.now() - then.getTime()) / 86400000);
+  if (days < 1)   return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 7)   return days + ' days ago';
+  if (days < 14)  return '1 week ago';
+  if (days < 30)  return Math.floor(days / 7) + ' weeks ago';
+  const months = Math.floor(days / 30);
+  if (months < 12) return months <= 1 ? '1 month ago' : months + ' months ago';
+  const years = Math.floor(days / 365);
+  return years === 1 ? '1 year ago' : years + ' years ago';
+}
+
+// Build a star string like ★★★★★ / ★★★★☆ from a 1-5 rating.
+function starString(n) {
+  const s = Math.max(0, Math.min(5, Math.round(n || 5)));
+  return '★★★★★'.slice(0, s) + '☆☆☆☆☆'.slice(0, 5 - s);
+}
+
+function escapeHTML(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+if (window.SITE && window.SITE.reviews && window.SITE.reviews.count != null) {
+  document.querySelectorAll('[data-content="reviewsCount"]').forEach(el => {
+    el.textContent = window.SITE.reviews.count;
+  });
+}
+
+if (reviewsEl && reviews.length) {
+  reviewsEl.innerHTML = '';
+  reviews.forEach(r => {
+    const when = relativeTime(r.stayDate);
+    const meta = [when, r.location].filter(Boolean).join(' · ');
+    const card = document.createElement('div');
+    card.className = 'review-card';
+    card.innerHTML =
+      '<div class="review-card__header">' +
+        '<div class="review-card__avatar">' + escapeHTML((r.name || '?').charAt(0)) + '</div>' +
+        '<div>' +
+          '<div class="review-card__name">' + escapeHTML(r.name) + '</div>' +
+          '<div class="review-card__meta">' + escapeHTML(meta) + '</div>' +
+        '</div>' +
+        '<div class="review-card__stars">' + starString(r.stars) + '</div>' +
+      '</div>' +
+      '<p class="review-card__text">' + escapeHTML(r.text) + '</p>';
+    reviewsEl.appendChild(card);
   });
 }
 
