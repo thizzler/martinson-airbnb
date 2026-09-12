@@ -158,14 +158,66 @@ if (hamburger && mobileMenu) {
   });
 }
 
-// Newsletter form — show success state, no backend
+// Newsletter form — posts to Mailchimp via JSONP (no backend, no redirect).
 const newsletterForm = document.getElementById('newsletterForm');
 const newsletterSuccess = document.getElementById('newsletterSuccess');
+const newsletterError = document.getElementById('newsletterError');
 
 if (newsletterForm && newsletterSuccess) {
-  newsletterForm.addEventListener('submit', e => {
-    e.preventDefault();
+  const mc = (window.SITE && window.SITE.mailchimp) || null;
+  const btn = newsletterForm.querySelector('button[type="submit"]');
+
+  const showSuccess = () => {
+    if (newsletterError) newsletterError.classList.remove('show');
     newsletterSuccess.classList.add('show');
     newsletterForm.reset();
+  };
+  const showError = msg => {
+    if (!newsletterError) return;
+    newsletterError.textContent = msg || 'Something went wrong. Please try again.';
+    newsletterError.classList.add('show');
+  };
+
+  newsletterForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // No config yet — fall back to the optimistic success message.
+    if (!mc || !mc.action) { showSuccess(); return; }
+
+    if (btn) { btn.disabled = true; }
+    if (newsletterError) newsletterError.classList.remove('show');
+
+    const params = new URLSearchParams(new FormData(newsletterForm));
+    if (mc.tag) params.append('tags', mc.tag);
+
+    const cb = 'mcCallback_' + Date.now();
+    params.append('c', cb);
+
+    const script = document.createElement('script');
+    const cleanup = () => {
+      delete window[cb];
+      script.remove();
+      if (btn) btn.disabled = false;
+    };
+
+    window[cb] = resp => {
+      cleanup();
+      if (resp && resp.result === 'success') {
+        showSuccess();
+      } else {
+        const raw = (resp && resp.msg) || '';
+        if (/already subscribed|already a list member/i.test(raw)) {
+          showSuccess(); // already on the list — treat as done
+        } else {
+          // Strip any HTML Mailchimp includes in its message.
+          const clean = raw.replace(/<[^>]*>/g, '').replace(/^\d+\s*-\s*/, '').trim();
+          showError(clean || 'Sorry, that didn\'t work. Please check your email and try again.');
+        }
+      }
+    };
+
+    script.src = mc.action.replace('/post?', '/post-json?') + '&' + params.toString();
+    script.onerror = () => { cleanup(); showError(); };
+    document.body.appendChild(script);
   });
 }

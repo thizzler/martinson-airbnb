@@ -130,6 +130,24 @@ window.SITE = {
         text: "Nice place with cute decor. The fencing around the house makes the outdoor space hidden and peaceful. Has all the things you need - spices, bathroom items, and a well stocked kitchen. I would definitely recommend to others."
       }
     ]
+  },
+
+  /* ---- Newsletter signup (Mailchimp) -------------------------
+     The "Stay in the loop" form posts to Mailchimp using these
+     values. They come from the Mailchimp embedded-form code
+     (Audience > Signup forms > Embedded form) and are safe to
+     keep in a public repo - none of this is secret.
+       action   = the form's post URL (the u=, id=, f_id= bits)
+       honeypot = the hidden anti-bot field name (starts "b_")
+       tag      = Mailchimp tag ID applied to every signup
+                  (1930805 = the "Sunny Nest" tag)
+     To point signups at a different audience later, paste a new
+     embed code and swap these three values.
+  ------------------------------------------------------------- */
+  mailchimp: {
+    action:   "https://martinsonrealestate.us2.list-manage.com/subscribe/post?u=412bff453c24c91b03e5614c4&id=4837a5e408&f_id=00a7f7e3f0",
+    honeypot: "b_412bff453c24c91b03e5614c4_4837a5e408",
+    tag:      "1930805"
   }
 
 };

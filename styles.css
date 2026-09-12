@@ -313,7 +313,7 @@ p + p { margin-top: 1em; }
   font-size: clamp(44px, 6vw, 80px);
   font-weight: 300;
   line-height: 1.0;
-  color: #fff;
+  color: var(--teal-mid);
   letter-spacing: -0.03em;
   margin-bottom: 14px;
 }
@@ -1070,6 +1070,15 @@ p + p { margin-top: 1em; }
 }
 .newsletter__success.show { display: flex; }
 
+.newsletter__error {
+  display: none;
+  font-size: 14px;
+  color: #E88; /* soft red that reads on the dark newsletter band */
+  font-weight: 600;
+  margin-top: 12px;
+}
+.newsletter__error.show { display: block; }
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -1288,7 +1297,7 @@ p + p { margin-top: 1em; }
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 300;
-  color: var(--teal-mid);
+  color: #fff;
   letter-spacing: 0;
 }
 .section-title em,
